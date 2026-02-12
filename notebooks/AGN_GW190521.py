@@ -66,7 +66,7 @@ for idx_val in idx:
         continue
     print()
 
-with open('/Users/jhuma/Lahar_work/multimessenger_project/data_store/AGN_disk_data/AGN_mod_store_new.pkl', 'rb') as f:
+with open('/Users/jhuma/Lahar_work/multimessenger_project/data_store/AGN_disk_data/AGN_mod_store.pkl', 'rb') as f:
     AGN_data = pickle.load(f)
 
 store_em_props = {}
@@ -77,5 +77,5 @@ for key in AGN_data.keys():
     em_props.emission_properties_retrieve()
     store_em_props[key] = em_props
 
-with open('/Users/jhuma/Lahar_work/multimessenger_project/data_store/AGN_disk_data/GW_EM_prop_store_new.pkl', 'wb') as f:
+with open('/Users/jhuma/Lahar_work/multimessenger_project/data_store/AGN_disk_data/GW_EM_prop_store.pkl', 'wb') as f:
     pickle.dump(store_em_props, f)
